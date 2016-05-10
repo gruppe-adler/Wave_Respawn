@@ -1,0 +1,48 @@
+respawn = 3;
+respawnDelay = 9999;
+respawnTemplates[] = {"Base"};
+respawnOnStart = -1;
+respawnDialog = 0;
+
+class Params
+{
+  class bluforwavesize
+  {
+    title = "BLUFOR Respawn Wave Size";
+    values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+    texts[] = {"Automatic", "1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
+    default = 0;
+  };
+
+	class opforwavesize
+	{
+		title = "OPFOR Respawn Wave Size";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+		texts[] = {"Automatic", "1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
+		default = 0;
+	};
+
+  class indepwavesize
+  {
+    title = "INDEPENDENT Respawn Wave Size";
+    values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+    texts[] = {"Automatic", "1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
+    default = 0;
+  };
+
+  class respawntime
+  {
+    title = "Player Respawn Time";
+    values[] = {30,60,90,120,150,180,210,240,270,300,330,360,390,420,450,480,510,540,570,600};
+    texts[] = {"0.5 min","1 min","1.5 min", "2 min", "2.5 min", "3 min", "3.5 min", "4 min", "4.5 min", "5 min", "5.5 min", "6 min", "6.5 min", "7 min", "7.5 min", "8 min", "8.5 min", "9 min", "9.5 min", "10 min"};
+    default = 150;
+  };
+
+  class waverespawntime
+  {
+    title = "Wave Respawn Time";
+    values[] = {30,60,90,120,150,180,210,240,270,300,330,360,390,420,450,480,510,540,570,600};
+    texts[] = {"0.5 min","1 min","1.5 min", "2 min", "2.5 min", "3 min", "3.5 min", "4 min", "4.5 min", "5 min", "5.5 min", "6 min", "6.5 min", "7 min", "7.5 min", "8 min", "8.5 min", "9 min", "9.5 min", "10 min"};
+    default = 270;
+  };
+};
