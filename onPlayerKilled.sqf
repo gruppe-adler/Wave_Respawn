@@ -58,8 +58,8 @@ while {_timeleft > 0} do {
   //explanation
   _explanation = parseText "<t align ='center' size='1.4'>Warte auf Spieler-Countdown.</t>";
 
-  //compose hint
-  hint composeText [_rule, _respawnIn, _lineBreak, _waveLeft, _lineBreak, _explanation, _lineBreak, _rule];
+  //compose hintsilent
+  hintsilent composeText [_rule, _respawnIn, _lineBreak, _waveLeft, _lineBreak, _explanation, _lineBreak, _rule];
 
   sleep 1;
 };
@@ -81,23 +81,23 @@ while _waitCondition do {
   } else {
     _explanation = parseText "<t align='center' size='1.4'>Warte auf weitere Spieler.</t>";
   };
-  hint composeText [_rule, _respawnIn, _lineBreak, _waveLeft, _lineBreak, _explanation, _lineBreak, _rule];
+  hintsilent composeText [_rule, _respawnIn, _lineBreak, _waveLeft, _lineBreak, _explanation, _lineBreak, _rule];
 
   sleep 1;
 };
 
 //respawn ======================================================================
 
-//respawn hint
+//respawn hintsilent
 _respawning = parseText format ["<t align='center' color='#00ff00' size='1.4'>Respawning...</t>"];
-hint composeText [_rule, _respawning, _lineBreak, _rule];
+hintsilent composeText [_rule, _respawning, _lineBreak, _rule];
 //respawn player
 setPlayerRespawnTime 0;
 forceRespawn player;
 
-//close hint
+//close hintsilent
 sleep 4;
-hint "";
+hintsilent "";
 
 //make sure player doesn't instantly respawn next time
 sleep 6;

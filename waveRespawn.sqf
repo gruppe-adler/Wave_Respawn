@@ -59,10 +59,10 @@ mcd_fnc_waveTimeLeftInd = {
 
     //check current dead players
     if (count deadPlayersBlu >= BLUFORWAVESIZE && WAVERESPAWNTIMELEFTBLU <= 0) then {
-
+      newBluSpawns = [];
       WAVERESPAWNBLU = true;
       publicVariable "WAVERESPAWNBLU";
-      diag_log "handleRespawns.sqf - Respawning now possible for Blufor.";
+      diag_log "waveRespawn.sqf - Respawning now possible for Blufor.";
 
       sleep (RESPAWNWAVEEXTRATIME max 7);
 
@@ -70,7 +70,9 @@ mcd_fnc_waveTimeLeftInd = {
       publicVariable "WAVERESPAWNBLU";
       WAVERESPAWNTIMELEFTBLU = WAVERESPAWNTIME;
       publicVariable  "WAVERESPAWNTIMELEFTBLU";
-      diag_log "handleRespawns.sqf - Respawning no longer possible for Blufor.";
+      diag_log "waveRespawn.sqf - Respawning no longer possible for Blufor.";
+      newBluSpawns = [];
+
       sleep 3;
     };
     sleep 2;
@@ -89,10 +91,10 @@ mcd_fnc_waveTimeLeftInd = {
 
     //check current dead players
     if (count deadPlayersOpf >= OPFORWAVESIZE && WAVERESPAWNTIMELEFTOPF <= 0) then {
-
+      newOpfSpawns = [];
       WAVERESPAWNOPF = true;
       publicVariable "WAVERESPAWNOPF";
-      diag_log "handleRespawns.sqf - Respawning now possible for Opfor.";
+      diag_log "waveRespawn.sqf - Respawning now possible for Opfor.";
 
       sleep (RESPAWNWAVEEXTRATIME max 7);
 
@@ -100,7 +102,9 @@ mcd_fnc_waveTimeLeftInd = {
       publicVariable "WAVERESPAWNOPF";
       WAVERESPAWNTIMELEFTOPF = WAVERESPAWNTIME;
       publicVariable "WAVERESPAWNTIMELEFTOPF";
-      diag_log "handleRespawns.sqf - Respawning no longer possible for Opfor.";
+      diag_log "waveRespawn.sqf - Respawning no longer possible for Opfor.";
+      newOpfSpawns = [];
+
       sleep 3;
     };
     sleep 2;
@@ -118,10 +122,10 @@ mcd_fnc_waveTimeLeftInd = {
 
     //check current dead players
     if (count deadPlayersInd >= INDEPWAVESIZE && WAVERESPAWNTIMELEFTIND <= 0) then {
-
+      newIndSpawns = [];
       WAVERESPAWNIND = true;
       publicVariable "WAVERESPAWNIND";
-      diag_log "handleRespawns.sqf - Respawning now possible for Independent.";
+      diag_log "waveRespawn.sqf - Respawning now possible for Independent.";
 
       sleep (RESPAWNWAVEEXTRATIME max 7);
 
@@ -129,7 +133,9 @@ mcd_fnc_waveTimeLeftInd = {
       publicVariable "WAVERESPAWNIND";
       WAVERESPAWNTIMELEFTIND = WAVERESPAWNTIME;
       publicVariable "WAVERESPAWNTIMELEFTIND";
-      diag_log "handleRespawns.sqf - Respawning no longer possible for Independent.";
+      diag_log "waveRespawn.sqf - Respawning no longer possible for Independent.";
+      newIndSpawns = [];
+      
       sleep 3;
     };
     sleep 2;
